@@ -16,7 +16,8 @@ import { Wpng2RoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    Wpng2RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
