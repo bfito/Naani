@@ -6,6 +6,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { PostListComponent } from './posts/post-list/post-list.component';
 
+import { Wpng2RoutingModule } from './app-routing.module';
+
 @NgModule({
   declarations: [
     AppComponent,
