@@ -10,6 +10,14 @@ import { Post } from './post';
 @Injectable()
 export class PostsService {
 
-  constructor() { }
+private postsUrl = "{YOUR-SITE-NAME}/wp-json/wp/v2/";
 
+  constructor(private http: Http) { }
+
+  getPosts(): Observable<Post[]> {
+
+    return this.http
+      .get(this.postsUrl + 'posts')
+      .map((res: Response) => res.json());
+  }
 }
