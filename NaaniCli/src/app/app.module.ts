@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { PostListComponent } from './posts/post-list/post-list.component';
 
 import { Wpng2RoutingModule } from './app-routing.module';
+import { PostSingleComponent } from './posts/post-single/post-single.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostListComponent
+    PostListComponent,
+    PostSingleComponent
   ],
   imports: [
     BrowserModule,
