@@ -11,9 +11,25 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 export class PostSingleComponent implements OnInit {
 
-  constructor() { }
+  post: Post;
+
+  constructor( private postsService: PostsService, private route: ActivatedRoute ) { }
+
+  getPost(slug){
+      this.postsService
+        .getPost(slug)
+        .subscribe(res => {
+          this.post = res[0];
+        });
+    }
 
   ngOnInit() {
+
+    this.route.params.forEach((params: Params) => {
+     let slug = params['slug'];
+     this.getPost(slug)
+    });
+
   }
 
 }
