@@ -1,2 +1,2 @@
 # Naani
-Going to use Angular 2 and wordpress
+Experimenting with Angular 2 and wordpress. 
